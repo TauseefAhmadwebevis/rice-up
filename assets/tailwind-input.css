@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global CSS Variables */
+:root {
+  --font-heading: 'Arvo', serif;
+  --font-body: 'Roboto', sans-serif;
+  --color-green: #C8D000;
+  --color-black: #2F2F2F;
+  --color-brown: #7E4F26;
+  --color-white: #ffffff;
+}
+
+/* Base Layer: Apply global font */
+@layer base {
+  html {
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Components Layer */
+@layer components {
+  .grid-wrapper {
+    @apply grid;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center 
+    px-[26px] py-[15px] 
+    font-[400] text-[16px] leading-[100%] tracking-[0]
+    bg-[var(--color-brown)] text-[var(--color-white)] 
+    rounded-[73px]
+    hover:bg-[var(--color-green)]
+    [transition:all_0.4s_ease];
+    font-family: var(--font-heading);
+  }
+
+  .btn--full {
+    @apply w-full;
+  }
+}

@@ -8,7 +8,11 @@ module.exports = {
     "./assets/**/*.{liquid,json,js,css}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        mobile: { max: '990px' },
+      },
+    },
   },
   plugins: [],
-}
+};

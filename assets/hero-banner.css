@@ -1,0 +1,68 @@
+.hero-banner__container {
+  max-width: calc(100% - 40px);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-banner__grid-content {
+  max-width: 556px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-banner__grid-item--left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  position: relative;
+}
+
+.hero-banner__grid-item--left::after,
+.hero-banner__grid-item--left::before {
+  content: "";
+  position: absolute;
+  background-image: url(https://cdn.shopify.com/s/files/1/0688/8488/9660/files/rice-up_website-banners_03-2_1.png?v=1754306105);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -30px;
+  left: 80px;
+  width: 220px;
+  height: 170px;
+  display: none;
+}
+
+.hero-banner__grid-item--left::before {
+  right: -30px;
+  left: auto;
+  bottom: auto;
+  top: 40px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0688/8488/9660/files/rice-up_website-banners_03-2_2.png?v=1754306105);
+  height: 220px;
+  width: 170px;
+}
+
+
+@media (min-width: 991px) {
+  .hero-banner__grid-item--left {
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-banner__grid-item--left::after,
+  .hero-banner__grid-item--left::before {
+    display: block;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .hero-banner__container {
+    max-width: 1440px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

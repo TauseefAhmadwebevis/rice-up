@@ -1,0 +1,8 @@
+.announcement-bar__message,
+.announcement-bar__message * {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+}

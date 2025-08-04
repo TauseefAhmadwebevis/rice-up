@@ -1,0 +1,82 @@
+.header--middle-center a.header__heading-link {
+  padding: 0;
+}
+
+.list-menu__item,
+.list-menu__item * {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-decoration: none !important;
+  transition: all 0.4s ease !important;
+}
+
+.list-menu__item:hover,
+.list-menu__item:hover * {
+  color: var(--color-green);
+  text-decoration: none;
+}
+
+.header__search {
+  display: none !important;
+}
+
+.icon__link svg,
+.icon__link .svg-wrapper {
+  min-height: 30px;
+  min-width: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.own__icons {
+  gap: 5px;
+}
+
+.icon__link--cart {
+  position: relative;
+  display: inline-flex;
+}
+
+.cart-count-bubble {
+  background: var(--color-brown);
+}
+
+.header {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.header_btn {
+  display: none;
+}
+
+.header__icon .icon {
+  height: 30px;
+  width: 20px;
+  color: var(--color-brown);
+}
+
+.shopify-section-header-sticky:not(.shopify-section-header-hidden) {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media (min-width: 990px) {
+ .header_btn {
+    display: inline-flex;
+  } 
+
+  .icon__link svg,
+  .icon__link .svg-wrapper {
+    min-height: 50px;
+    min-width: 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .own__icons {
+    gap: 12px;
+  }
+}
