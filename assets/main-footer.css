@@ -1,0 +1,13 @@
+footer:not(.main-footer) {
+  display: none;
+}
+
+.copy-right-payment-area {
+  max-width: 474px;
+  width: 100%;
+}
+
+.copy-right-payment-area svg {
+  max-width: 100%;
+  width: 100%;
+}

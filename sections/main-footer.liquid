@@ -1,0 +1,167 @@
+{{ 'main-footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="main-footer">
+  <div class="main-footer__container page-width py-[80px] mobile:py-[60px]">
+    <div class="main-footer__grid flex flex-wrap justify-between gap-[24px] mobile:justify-center">
+      <div class="main-footer__newsletter-area w-[calc(35%-12px)] mobile:w-full">
+        <div class="main-footer__newsletter-content">
+          <h2 class="main-footer__newsletter-heading text-[#2F2F2F] font-bold text-[42px] tablet:text-[32px] leading-[120%] mobile:text-center">{{section.settings.heading}}</h2>
+          <p class="main-footer__newsletter-subheading font-normal text-[16px] leading-[120%] font-[Roboto] text-[#5F5B5B] mt-[24px] mobile:text-center">{{ section.settings.subheading }}</p>
+        </div>
+        <div class="main-footer__newsletter-form-wraper">
+          {%  form 'customer'  %}
+            {%- if form.posted_successfully? -%}
+              <h3
+                class="newsletter-form__message newsletter-form__message--success form__message"
+                id="Newsletter-success--{{ section.id }}"
+                tabindex="-1"
+                autofocus
+              >
+                <span class="svg-wrapper">
+                  {{- 'icon-success.svg' | inline_asset_content -}}
+                </span>
+                {{- 'newsletter.success' | t }}
+              </h3>
+            {%- endif -%}
+            <input type="email" placeholder="Enter your email" class="max-w-full mt-[24px] mb-[24px] w-full border border-[#D1D0D0] border-[0.5px] px-[20px] py-[15px] font-['Roboto'] font-normal text-[16px] leading-[18px] text-[#5F5B5B] placeholder:text-[#5F5B5B] placeholder:font-normal placeholder:text-[16px] placeholder:leading-[18px]" name="contact[email]" >
+            <button class="main-footer__newsletter-btn btn btn--full capitalize" type="submit">Subscribe Now</button>
+          {% endform %}
+        </div>  
+      </div>
+      <div class="main-footer__nav-area w-[calc(30%-12px)] mobile:w-full">
+        <div class="main-footer__nav-area-grid flex flex-wrap gap-[40px]">
+          {% for block in section.blocks %} 
+            {% if block.type == 'link-list' %}
+            <nav class="main-footer__nav-wraper w-[calc(50%-20px)] mobile:w-full">
+              <h6 class="main-footer__nav-heading text-[#3C3C3D] mb-[20px] font-normal not-italic text-[24px] leading-[120%] align-middle font-[Arvo] tracking-normal  mobile:text-center">{{ block.settings.menu-title }}</h6>
+              <ul class="main-footer__nav-list flex flex-wrap flex-col gap-[12px]">
+                {% if block.settings.menu %}
+                  {% for link in linklists[block.settings.menu].links %}
+                    <li class="main-footer__nav-item text-left mobile:text-center"><a class="main-footer__nav-link font-normal not-italic text-[16px] leading-[170%] tracking-normal font-[Roboto] text-[##5F5B5B]  mobile:text-center" href="{{ link.url }}">{{ link.title }}</a></li>
+                  {% endfor %}
+                {% endif %}
+              </ul>
+            </nav>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="main-footer__social-area w-[calc(26%-12px)] mobile:w-full">
+        <h6 class="main-footer__social-heading text-left mobile:text-center mb-[20px] main-footer__nav-heading text-[#3C3C3D] font-normal not-italic text-[24px] leading-[120%] align-middle font-[Arvo] tracking-normal">{{section.settings.social-iCon-heading}}</h6>
+        <div class="main-footer__social-grid max-w-[260px] mobile:max-w-full flex flex-wrap gap-[12px] justify-between mobile:justify-center">
+          {% for block in section.blocks %}
+            {% if block.type == 'social-icon' %}
+              <a href="{{ block.settings.icon-url }}" class="main-footer__social-link no-underline">
+                {{block.settings.social_icon}}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-footer__copyright bg-[rgba(122,117,109,0.1)] pt-[20px] pb-[20px]">
+    <div class="main-footer__copyright-container page-width">
+      <div class="main-footer__copyright-grid flex flex-wrap items-center justify-between gap-[20px] mobile:flex-col mobile:justify-center">
+        <p class="main-footer__copyright-text text-[#5F5B5B] text-[16px] leading-[100%] tracking-[0.01em] font-normal font-[Roboto] mobile:text-center">{{ section.settings.copyright-content }}</p>
+        <div class="copy-right-payment-area">
+          {% for block in section.blocks %}
+            {% if block.type == 'payment-method' %}
+            <a href="{{ block.settings.payment-img-link }}">
+              {{block.settings.payment-img}}
+            </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Main Footer",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Newsletter Heading",
+        "id": "heading"
+      },
+      {
+        "type": "text",
+        "label": "Newsletter Subheading",
+        "id": "subheading"
+      },
+      {
+        "type": "text",
+        "label": "Social ICon Heading",
+        "id": "social-iCon-heading"
+      },
+      {
+        "type": "color",
+        "label": "Bg Color",
+        "id": "bg_color"
+      },
+      {
+        "type": "text",
+        "label": "Copyright Content",
+        "id": "copyright-content"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "link-list",
+        "name": "Menu",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Menu Title",
+            "id": "menu-title"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Select Menu"
+          }
+        ]
+      },
+      {
+        "type": "social-icon",
+        "name": "Social Icon Repeat",
+        "settings": [
+          {
+            "type": "textarea",
+            "label": "Social Icon",
+            "id": "social_icon"
+          },
+          {
+            "type": "url",
+            "label": "Icon URL",
+            "id": "icon-url"
+          }
+        ]
+      },
+      {
+        "type": "payment-method",
+        "name": "payment-repeat",
+        "settings": [
+          {
+            "type": "textarea",
+            "label": "payment Image",
+            "id": "payment-img"
+          },
+          {
+            "type": "url",
+            "label": "payment Image Link",
+            "id": "payment-img-link"
+          }
+        ]
+      }
+  ],
+    "presets": [
+      {
+        "name": "Main Footer"
+      }
+    ]
+  }
+{% endschema %}
