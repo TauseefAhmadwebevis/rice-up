@@ -40,7 +40,7 @@
       assign ratio = 1
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover">
+  <div class="card-wrapper product-card-wrapper">
     <div
       class="
         card card--{{ settings.card_style }}
@@ -108,6 +108,14 @@
         {%- endif -%}
         <div class="card__content">
           <div class="card__information">
+            <div
+              style="{{ jm_style }}"
+              class="jdgm-widget jdgm-preview-badge"
+              data-id="{{ card_product.id }}"
+              data-auto-install="false"
+            >
+              {{ card_product.metafields.judgeme.badge }}
+            </div>
             <h3
               class="card__heading"
               {% if card_product.featured_media == null and settings.card_style == 'standard' %}
@@ -145,8 +153,16 @@
       </div>
       <div class="card__content">
         <div class="card__information">
+          <div
+            style="{{ jm_style }}"
+            class="jdgm-widget jdgm-preview-badge"
+            data-id="{{ card_product.id }}"
+            data-auto-install="false"
+          >
+            {{ card_product.metafields.judgeme.badge }}
+          </div>
           <h3
-            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+            class="card__heading text-[18px] mobile:text-[16px] leading-[120%] tracking-[0] font-normal text-[#000000]{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
               id="title-{{ section_id }}-{{ card_product.id }}"
             {% endif %}
@@ -358,7 +374,7 @@
                     id="{{ product_form_id }}-submit"
                     type="submit"
                     name="add"
-                    class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+                    class="quick-add__submit btn btn--full capitalize"
                     aria-haspopup="dialog"
                     aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                     aria-live="polite"
@@ -401,7 +417,7 @@
                   id="{{ product_form_id }}-submit"
                   type="submit"
                   name="add"
-                  class="quick-add__submit button button--full-width button--secondary"
+                  class="quick-add__submit btn btn--full capitalize"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                   data-sold-out-message="true"
                   disabled
@@ -576,7 +592,7 @@
       assign ratio = 0.8
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover">
+  <div class="card-wrapper product-card-wrapper">
     <div
       class="
         card card--{{ settings.card_style }}
@@ -605,7 +621,15 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
+          <div
+            style="{{ jm_style }}"
+            class="jdgm-widget jdgm-preview-badge"
+            data-id="{{ card_product.id }}"
+            data-auto-install="false"
+          >
+            {{ card_product.metafields.judgeme.badge }}
+          </div>
+          <h3 class="card__heading card__heading--placeholder text-[18px] mobile:text-[16px] leading-[120%] tracking-[0] font-normal text-[#000000]{% if settings.card_style == 'standard' %} h5{% endif %}">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.product_title' | t }}
             </a>

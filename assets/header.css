@@ -25,10 +25,10 @@
 
 .icon__link svg,
 .icon__link .svg-wrapper {
-  min-height: 30px;
-  min-width: 30px;
-  height: 30px;
-  width: 30px;
+  min-height: 40px;
+  min-width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 .own__icons {

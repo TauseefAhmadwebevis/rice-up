@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_banner_Gd7HML": {
@@ -7,13 +16,337 @@
         "rating_text": "4.9 (18 Reviews)",
         "heading": "Your New Favorite Healthy Snack Is Here",
         "btn_label": "Shop Now",
-        "btn_link": "shopify:\/\/collections\/all",
-        "image": "shopify:\/\/shop_images\/Rectangle_3_1.png",
-        "image_mobile": "shopify:\/\/shop_images\/Rectangle_3_2.png"
+        "btn_link": "shopify://collections/all",
+        "image": "shopify://shop_images/Rectangle_3_1.png",
+        "image_mobile": "shopify://shop_images/Rectangle_3_2.png"
+      }
+    },
+    "logos_slider_Abjtcj": {
+      "type": "logos-slider",
+      "blocks": {
+        "slide_PdUCQJ": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_1.svg",
+            "title": "No Sugar"
+          }
+        },
+        "slide_wjLcdK": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_2.svg",
+            "title": "Never Fried"
+          }
+        },
+        "slide_Gdz676": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_3.svg",
+            "title": "Palm Oil Free"
+          }
+        },
+        "slide_UX7BAQ": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_4.svg",
+            "title": "All Natural"
+          }
+        },
+        "slide_zBTjtn": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_5.svg",
+            "title": "Gluten Free"
+          }
+        }
+      },
+      "block_order": [
+        "slide_PdUCQJ",
+        "slide_wjLcdK",
+        "slide_Gdz676",
+        "slide_UX7BAQ",
+        "slide_zBTjtn"
+      ],
+      "name": "Logos Slider",
+      "settings": {}
+    },
+    "featured_products_p4tFzG": {
+      "type": "featured-products",
+      "name": "Featured Products",
+      "settings": {
+        "heading": "Fan Favorites Flying Off the Shelves",
+        "collection": "frontpage",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "quick_add": "standard"
+      }
+    },
+    "category_grid_i9TfBa": {
+      "type": "category-grid",
+      "blocks": {
+        "card_83NxAM": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_328917.png",
+            "mobile_image": "shopify://shop_images/Rectangle_328917_1.png",
+            "title": "Zero Sugar",
+            "link": "#"
+          }
+        },
+        "card_ryCrKb": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_328918.png",
+            "mobile_image": "shopify://shop_images/Rectangle_328918_1.png",
+            "title": "Collagen Bars",
+            "link": "#"
+          }
+        },
+        "card_XCGGfj": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_328919.png",
+            "mobile_image": "shopify://shop_images/Rectangle_328919_1.png",
+            "title": "Rice Snacks",
+            "link": "#"
+          }
+        },
+        "card_M8m4cw": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_328920.png",
+            "mobile_image": "shopify://shop_images/Rectangle_328920_1.png",
+            "title": "Corn Chips",
+            "link": "#"
+          }
+        },
+        "card_tdytY8": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_328921.png",
+            "mobile_image": "shopify://shop_images/Rectangle_328921_1.png",
+            "title": "Tortilla Chips",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "card_83NxAM",
+        "card_ryCrKb",
+        "card_XCGGfj",
+        "card_M8m4cw",
+        "card_tdytY8"
+      ],
+      "name": "Categories Grid",
+      "settings": {
+        "heading": "Healthy Choices, One Click Away"
+      }
+    },
+    "reviews_slider_UA8Bwg": {
+      "type": "reviews-slider",
+      "blocks": {
+        "review_VbJaA8": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_328923.png",
+            "title": "The perfect guilt-free snack",
+            "desc": "I’ve been trying to eat healthier, and Rice-Up! has become my go-to. The crunch is amazing, the flavors are on point, and I don’t feel heavy after snacking. Love that it’s clean and gluten-free!",
+            "name": "Amina R.",
+            "date": "26 Oct, 2024"
+          }
+        },
+        "review_k4TCif": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_328925_2.png",
+            "title": "The perfect guilt-free snack",
+            "desc": "I’ve been trying to eat healthier, and Rice-Up! has become my go-to. The crunch is amazing, the flavors are on point, and I don’t feel heavy after snacking. Love that it’s clean and gluten-free!",
+            "name": "Amina R.",
+            "date": "26 Oct, 2024"
+          }
+        },
+        "review_Nn9nPN": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_328923.png",
+            "title": "The perfect guilt-free snack",
+            "desc": "I’ve been trying to eat healthier, and Rice-Up! has become my go-to. The crunch is amazing, the flavors are on point, and I don’t feel heavy after snacking. Love that it’s clean and gluten-free!",
+            "name": "Amina R.",
+            "date": "26 Oct, 2024"
+          }
+        },
+        "review_UjKdKE": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_328925_2.png",
+            "title": "The perfect guilt-free snack",
+            "desc": "I’ve been trying to eat healthier, and Rice-Up! has become my go-to. The crunch is amazing, the flavors are on point, and I don’t feel heavy after snacking. Love that it’s clean and gluten-free!",
+            "name": "Amina R.",
+            "date": "26 Oct, 2024"
+          }
+        }
+      },
+      "block_order": [
+        "review_VbJaA8",
+        "review_k4TCif",
+        "review_Nn9nPN",
+        "review_UjKdKE"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Snack Stories That Speak for Themselves"
+      }
+    },
+    "logos_slider_xxePX7": {
+      "type": "logos-slider",
+      "blocks": {
+        "slide_kkCMFE": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_1.svg",
+            "title": "No Sugar"
+          }
+        },
+        "slide_48cyrP": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_2.svg",
+            "title": "Never Fried"
+          }
+        },
+        "slide_BQtR7H": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_3.svg",
+            "title": "Palm Oil Free"
+          }
+        },
+        "slide_CFURE8": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_4.svg",
+            "title": "All Natural"
+          }
+        },
+        "slide_NRzNaN": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_5.svg",
+            "title": "Gluten Free"
+          }
+        }
+      },
+      "block_order": [
+        "slide_kkCMFE",
+        "slide_48cyrP",
+        "slide_BQtR7H",
+        "slide_CFURE8",
+        "slide_NRzNaN"
+      ],
+      "name": "Logos Slider",
+      "settings": {}
+    },
+    "brands_GUfT6t": {
+      "type": "brands",
+      "blocks": {
+        "card_8DtaQ8": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_1597879818.png",
+            "title": "RiceUp",
+            "desc": "We believe that when we eat well, we feel well and live better. That is why our mission is to make healthy eating easy and most importantly, very tasty."
+          }
+        },
+        "card_E9Gdnp": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_1597879819.png",
+            "title": "ZeroSugar",
+            "desc": "А \"better for you\", \"free-from\" brand, offering a well balanced and easy-to-go snacks with clean labels and natural ingredients, with ZERO SUGAR ADDED, No fructose, No HFCS."
+          }
+        },
+        "card_UtLWpD": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_1597879820.png",
+            "title": "CornUp",
+            "desc": "А “better-for-me & fun”, contemporary lifestyle brand, devoted to making and sharing gluten-free snackable products, made of natural, finely selected ingredients."
+          }
+        }
+      },
+      "block_order": [
+        "card_8DtaQ8",
+        "card_E9Gdnp",
+        "card_UtLWpD"
+      ],
+      "name": "Brands",
+      "settings": {
+        "heading": "Our Brands"
+      }
+    },
+    "faq_EpiDRE": {
+      "type": "faq",
+      "blocks": {
+        "faq_VhmYBQ": {
+          "type": "faq",
+          "settings": {
+            "title": "1- What makes Rice-Up! snacks healthier than regular chips?",
+            "answer": "Rice-Up! snacks are made from whole grain brown rice, are gluten-free, non-GMO, and contain no artificial additives. They’re air-popped or lightly baked, not fried, making them a lighter, cleaner alternative to traditional snacks."
+          }
+        },
+        "faq_L7x9D6": {
+          "type": "faq",
+          "settings": {
+            "title": "2. Are your products suitable for vegans or people with dietary restrictions?",
+            "answer": "Rice-Up! snacks are made from whole grain brown rice, are gluten-free, non-GMO, and contain no artificial additives. They’re air-popped or lightly baked, not fried, making them a lighter, cleaner alternative to traditional snacks."
+          }
+        },
+        "faq_ynqGMh": {
+          "type": "faq",
+          "settings": {
+            "title": "3. Where are Rice-Up! products made?",
+            "answer": "Rice-Up! snacks are made from whole grain brown rice, are gluten-free, non-GMO, and contain no artificial additives. They’re air-popped or lightly baked, not fried, making them a lighter, cleaner alternative to traditional snacks."
+          }
+        },
+        "faq_xDDAwf": {
+          "type": "faq",
+          "settings": {
+            "title": "4. How can I place an order and is there a minimum?",
+            "answer": "Rice-Up! snacks are made from whole grain brown rice, are gluten-free, non-GMO, and contain no artificial additives. They’re air-popped or lightly baked, not fried, making them a lighter, cleaner alternative to traditional snacks."
+          }
+        },
+        "faq_gQeaM8": {
+          "type": "faq",
+          "settings": {
+            "title": "5. Do you offer international shipping?",
+            "answer": "Rice-Up! snacks are made from whole grain brown rice, are gluten-free, non-GMO, and contain no artificial additives. They’re air-popped or lightly baked, not fried, making them a lighter, cleaner alternative to traditional snacks."
+          }
+        }
+      },
+      "block_order": [
+        "faq_VhmYBQ",
+        "faq_L7x9D6",
+        "faq_ynqGMh",
+        "faq_xDDAwf",
+        "faq_gQeaM8"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "heading": "Frequently Asked  Questions",
+        "image": "shopify://shop_images/Group_34245.png",
+        "btn_label": "Read All FAQ’s",
+        "btn_link": "#"
       }
     }
   },
   "order": [
-    "hero_banner_Gd7HML"
+    "hero_banner_Gd7HML",
+    "logos_slider_Abjtcj",
+    "featured_products_p4tFzG",
+    "category_grid_i9TfBa",
+    "reviews_slider_UA8Bwg",
+    "logos_slider_xxePX7",
+    "brands_GUfT6t",
+    "faq_EpiDRE"
   ]
 }

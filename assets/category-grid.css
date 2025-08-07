@@ -1,0 +1,16 @@
+.categories__grid-title-link svg {
+  transition: all 0.4s ease;
+  height: 16px;
+  width: 16px;
+}
+
+.categories__grid-card:hover .categories__grid-title-link svg {
+  transform: rotate(45deg);
+}
+
+@media (min-width: 1200px) {
+  .categories__grid-title-link svg {
+    height: 20px;
+    width: 20px;
+  }
+}
