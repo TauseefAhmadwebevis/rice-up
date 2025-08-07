@@ -5,14 +5,14 @@
     {% if section.settings.heading != blank %}
       <h2 class="faq__heading text-[#2F2F2F] font-bold text-[48px] leading-[64px] mobile:text-[32px] mobile:leading-[42px] mb-[48px] mobile:mb-[32px] text-center">{{ section.settings.heading }}</h2>
     {% endif %}
-    <div class="faq__grid flex flex-wrap gap-[24px]">
-      <div class="faq__grid-item faq__grid-item--left w-[calc(50%-12px)] mobile:w-full">
+    <div class="faq__grid flex flex-wrap gap-[50px] mobile:gap-[20px]">
+      <div class="faq__grid-item faq__grid-item--left w-[calc(50%-25px)] mobile:w-full">
         {% if section.blocks.size > 0 %}
           <div class="faq__grid-blocks">
             {% for block in section.blocks %}
               {% if block.settings.answer != blank and block.settings.title != blank %}
-                <div class="faq__grid-block faq__grid-block--{{ forloop.index }} py-[24px] border-t border-[#E7E6E6] {% if forloop.last %} border-b{% endif %}">
-                  <h5 class="faq__grid-question font-arvo font-normal text-[20px] leading-[170%] tracking-[0] text-[#000000] flex flex-wrap items-center justify-between">
+                <div class="faq__grid-block faq__grid-block--{{ forloop.index }} py-[24px] border-t border-[#E7E6E6] {% if forloop.last %} border-b{% endif %}{% if block.settings.open == true %} open-by-default{% endif %}" data-collapisble-componenet>
+                  <h5 class="faq__grid-question font-arvo cursor-pointer font-normal text-[20px] leading-[170%] tracking-[0] text-[#000000] flex flex-wrap items-center justify-between" data-collapisble-componenet-title>
                     <span class="w-[calc(100%-40px)] block">
                       {{ block.settings.title }}
                     </span>
@@ -21,12 +21,12 @@
                         <path d="M14.4 7.7998V14.3998H7.79999V15.5998H14.4V22.1998H15.6V15.5998H22.2V14.3998H15.6V7.7998H14.4Z" fill="#231F20" stroke="#231F20" stroke-width="0.25"/>
                       </svg>
                       <svg class="icon-minus" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.7998 14.4004V15.6004H22.1998V14.4004H7.7998Z" fill="#648D3D" stroke="#648D3D" stroke-width="0.25"/>
+                        <path d="M7.7998 14.4004V15.6004H22.1998V14.4004H7.7998Z" fill="#231F20" stroke="#231F20" stroke-width="0.25"/>
                       </svg>
                     </span>
                   </h5>
                   {% if block.settings.answer != blank %}
-                    <p class="faq__grid-answer font-roboto font-normal text-[16px] leading-[170%] tracking-[0] text-[#5D5F5B]">
+                    <p class="faq__grid-answer font-roboto font-normal text-[16px] leading-[170%] tracking-[0] text-[#5D5F5B]" data-collapisble-componenet-desc>
                       {{ block.settings.answer }}
                     </p>
                   {% endif %}
@@ -36,14 +36,14 @@
           </div>
         {% endif %}
       </div>
-      <div class="faq__grid-item faq__grid-item--right w-[calc(50%-12px)] mobile:w-full">
+      <div class="faq__grid-item faq__grid-item--right w-[calc(50%-25px)] mobile:w-full">
         {% if section.settings.image != blank %}
           <img src="{{ section.settings.image | image_url }}" alt="{{ section.settings.image.alt }}" class="faq__grid-img max-w-full w-full block">
         {% endif %}
       </div>
     </div>
     {% if section.settings.btn_label != blank %}
-      <div class="faq__cta text-center mt-[50px]">
+      <div class="faq__cta text-center mt-[50px] mobile:mt-[20px]">
         <a href="{{ section.settings.btn_link }}" class="faq__cta faq__cta-link btn">
           <span>
             {{ section.settings.btn_label }}
@@ -89,6 +89,11 @@
         "type": "faq",
         "name": "FAQ",
         "settings": [
+          {
+            "type": "checkbox",
+            "label": "Open By default",
+            "id": "open"
+          },
           {
             "type": "text",
             "label": "Question",
