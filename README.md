@@ -106,6 +106,15 @@ shopify theme dev
 
 ---
 
+## 📦 COmmands to run tailwind css watch and compialer 
+```
+npm run build:css
+npx tailwindcss -i ./assets/tailwind-input.css -o ./assets/tailwind-output.css --watch
+
+```
+
+---
+
 ## 📦 Build for Production
 
 ```

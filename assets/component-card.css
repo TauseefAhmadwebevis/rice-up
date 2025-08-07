@@ -495,7 +495,7 @@
 }
 
 .card-information > *:not(.visually-hidden:first-child) + *:not(.rating):not(.card__information-volume-pricing-note) {
-  margin-top: 0.7rem;
+  margin-top: 9px;
 }
 
 .card-information .caption {
@@ -592,4 +592,34 @@
   .grid__item:nth-child(8n) .product-card-wrapper:hover .shape--blob {
     clip-path: polygon(var(--shape--blob-5));
   }
+}
+
+
+/* ===== custom pdp card css ==== */
+
+.badge {
+  display: none !important;
+}
+
+.jdgm-widget,
+.jdgm-widget *:not(.jdgm-star) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 120% !important;
+  letter-spacing: 0 !important;
+  color: #7E4F26;
+}
+
+.card__information * {
+  text-align: center;
+}
+
+.card__heading,
+.price {
+  margin-top: 9px;
+}
+
+.jdgm-prev-badge__text {
+  margin-left: 8px;
 }

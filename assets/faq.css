@@ -1,0 +1,9 @@
+.icon-minus,
+.faq__grid-block--active .icon-plus {
+  display: none;
+}
+
+.faq__grid-block--active .icon-minus {
+  display: block;
+}
+

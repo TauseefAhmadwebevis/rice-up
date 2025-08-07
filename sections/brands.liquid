@@ -1,0 +1,73 @@
+{{ 'brands.css' | asset_url | stylesheet_tag }}
+
+<section class="brands py-[80px] mobile:py-[60px] bg-[#ffffff]">
+  <div class="brands__container page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="brands__heading text-[#2F2F2F] font-bold text-[48px] leading-[64px] mobile:text-[32px] mobile:leading-[42px] mb-[48px] mobile:mb-[32px] text-center">{{ section.settings.heading }}</h2>
+    {% endif %}
+    {% if section.blocks.size > 0 %}
+      <div class="brands__blocks flex flex-wrap gap-[24px] items-stretch">
+        {% for block in section.blocks %}
+          <div class="brands__block brands__block--{{ forloop.index }} w-[calc(33.33%-18px)] mobile:w-full">
+            <div class="brands__block-card bg-[#ffffff] rounded-[16px] py-[24px] px-[26px] border border-[#7E4F26]">
+              {% if block.settings.image != blank %}
+                <div class="brands__block-media">
+                  <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" class="brands__block-img max-w-full w-full block aspect-[1.66] object-cover rounded-[16px]">
+                </div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h4 class="brands__block-title font-arvo font-normal text-[28px] leading-[100%] tracking-normal text-[#2F2F2F] mt-[24px] mb-[14px]">{{ block.settings.title }}</h4>
+              {% endif %}
+              {% if block.settings.desc != blank %}
+                <p class="brands__block-desc max-w-[356px] text-[#000000] opacity-60 font-roboto font-normal text-[16px] leading-[120%] tracking-normal">
+                  {{ block.settings.desc }}
+                </p>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>  
+</section>
+
+{% schema %}
+  {
+    "name": "Brands",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Heading",
+        "id": "heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "card",
+        "name": "brand_card",
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Title",
+            "id": "image"
+          },
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title"
+          },
+          {
+            "type": "textarea",
+            "label": "Description",
+            "id": "desc"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Brands"
+      }
+    ]
+  }
+{% endschema %}

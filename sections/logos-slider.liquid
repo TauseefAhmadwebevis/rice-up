@@ -1,0 +1,102 @@
+{{ 'logos-slider.css' |  asset_url |  stylesheet_tag }}
+
+<section class="logos-slider bg-[#F5F5F5] py-[24px] overflow-x-hidden">
+  <div class="logos-slider__container">
+    {% if section.blocks.size > 0 %}
+      <div class="logos-slider__blocks flex gap-[70px] mobile:gap-[50px] items-center">
+        {% for block in section.blocks %}
+          <div class="logos-slider__block logos-slider__block--{{ forloop.index }} flex flex-wrap gap-[14px] items-center mobile:gap-[10px]">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | image_url }}" class="logos-slider__block-icon" alt="{{ block.settings.icon.alt }}" />
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3 class="logos-slider__block-title font-normal text-[20px] leading-[100%] tracking-[0] text-[#000000] mobile:text-[16px]">{{ block.settings.title }}</h3>
+            {% endif %}
+          </div>
+        {% endfor %}
+        {% for block in section.blocks %}
+          <div class="logos-slider__block logos-slider__block--{{ forloop.index }} flex flex-wrap gap-[14px] items-center mobile:gap-[10px]">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | image_url }}" class="logos-slider__block-icon" alt="{{ block.settings.icon.alt }}" />
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3 class="logos-slider__block-title font-normal text-[20px] leading-[100%] tracking-[0] text-[#000000] mobile:text-[16px]">{{ block.settings.title }}</h3>
+            {% endif %}
+          </div>
+        {% endfor %}
+        {% for block in section.blocks %}
+          <div class="logos-slider__block logos-slider__block--{{ forloop.index }} flex flex-wrap gap-[14px] items-center mobile:gap-[10px]">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | image_url }}" class="logos-slider__block-icon" alt="{{ block.settings.icon.alt }}" />
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3 class="logos-slider__block-title font-normal text-[20px] leading-[100%] tracking-[0] text-[#000000] mobile:text-[16px]">{{ block.settings.title }}</h3>
+            {% endif %}
+          </div>
+        {% endfor %}
+        {% for block in section.blocks %}
+          <div class="logos-slider__block logos-slider__block--{{ forloop.index }} flex flex-wrap gap-[14px] items-center mobile:gap-[10px]">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | image_url }}" class="logos-slider__block-icon" alt="{{ block.settings.icon.alt }}" />
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3 class="logos-slider__block-title font-normal text-[20px] leading-[100%] tracking-[0] text-[#000000] mobile:text-[16px]">{{ block.settings.title }}</h3>
+            {% endif %}
+          </div>
+        {% endfor %}
+        {% for block in section.blocks %}
+          <div class="logos-slider__block logos-slider__block--{{ forloop.index }} flex flex-wrap gap-[14px] items-center mobile:gap-[10px]">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | image_url }}" class="logos-slider__block-icon" alt="{{ block.settings.icon.alt }}" />
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3 class="logos-slider__block-title font-normal text-[20px] leading-[100%] tracking-[0] text-[#000000] mobile:text-[16px]">{{ block.settings.title }}</h3>
+            {% endif %}
+          </div>
+        {% endfor %}
+        {% for block in section.blocks %}
+          <div class="logos-slider__block logos-slider__block--{{ forloop.index }} flex flex-wrap gap-[14px] items-center mobile:gap-[10px]">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | image_url }}" class="logos-slider__block-icon" alt="{{ block.settings.icon.alt }}" />
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3 class="logos-slider__block-title font-normal text-[20px] leading-[100%] tracking-[0] text-[#000000] mobile:text-[16px]">{{ block.settings.title }}</h3>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Logos Slider",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Icon",
+            "id": "icon"
+          },
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Logos Slider"
+      }
+    ]
+  }
+{% endschema %}
